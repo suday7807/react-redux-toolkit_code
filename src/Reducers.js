@@ -14,7 +14,7 @@ export const customReducer = createReducer(initialState, (builder) => {
       state.c = state.c + 1;
     })
     .addCase(IncrementBy25, (state, action) => {
-      state.c = state.c + 25;
+      state.c = state.c + action.payload;
     })
     .addCase(Decrement, (state, action) => {
       state.c = state.c - 1;
